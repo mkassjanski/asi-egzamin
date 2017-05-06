@@ -1,8 +1,7 @@
-**Flicks 2.0**	
+### Projekt zespołowy Flicks 2.0
 
 Autorzy:
 * Martyna Gałaszewska
-
 * Michał Kassjański
 
 [Flicks 2.0](https://damp-escarpment-69384.herokuapp.com/)
