@@ -1,6 +1,11 @@
-Martyna Gałaszewska (zaliczenie)
+Flicks 2.0
 
-[Flicks](https://damp-escarpment-69384.herokuapp.com/)
+Autorzy:
+* Martyna Gałaszewska
+
+* Michał Kassjański
+
+[Flicks 2.0](https://damp-escarpment-69384.herokuapp.com/)
 
 | Wersja Ruby  | Wersja Rails | Baza danych  |
 | :-------------: |:-------------:| :-----:|
