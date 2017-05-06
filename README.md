@@ -1,4 +1,4 @@
-Flicks 2.0
+**Flicks 2.0**	
 
 Autorzy:
 * Martyna Gałaszewska
