@@ -4,7 +4,7 @@ Autorzy:
 * Martyna Gałaszewska
 * Michał Kassjański
 
-[Flicks 2.0](https://damp-escarpment-69384.herokuapp.com/)
+[Flicks 2.0](https://flicks2.herokuapp.com/)
 
 | Wersja Ruby  | Wersja Rails | Baza danych  |
 | :-------------: |:-------------:| :-----:|
