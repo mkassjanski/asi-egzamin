@@ -44,7 +44,7 @@ gem "paperclip", "~> 5.0.0"
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 ## server s3
-gem 'aws-sdk', '~> 2.3'
+#gem 'aws-sdk', '~> 2.3'
 # dane
 gem 'faker', '~> 1.7.3'
 
