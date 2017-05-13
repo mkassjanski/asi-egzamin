@@ -34,7 +34,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 ## Logowanie
@@ -45,7 +44,7 @@ gem "paperclip", "~> 5.0.0"
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 ## server s3
-gem 'aws-sdk', '~> 2.3'
+#gem 'aws-sdk', '~> 2.3'
 # dane
 gem 'faker', '~> 1.7.3'
 
