@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170513213521) do
+ActiveRecord::Schema.define(version: 20170513213575) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "commenter"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20170513213521) do
     t.integer  "poster_file_size"
     t.datetime "poster_updated_at"
     t.integer  "user_id"
+    t.index ["user_id"], name: "index_films_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
