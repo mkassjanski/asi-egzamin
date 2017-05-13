@@ -10,7 +10,7 @@ class FilmsController < ApplicationController
 
   def new
     if user_signed_in?
-     @film = Film.new
+     @film = current_user.films.build
    else
     redirect_to new_user_session_path, :notice => "Please log-in"
     end

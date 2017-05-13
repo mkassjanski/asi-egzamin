@@ -26,6 +26,9 @@
   <body>
     <div class="navbar navbar-default navbar-fixed-top">
        <div class="container">
+         <% flash.each do |name, msg| %>
+            <%= content_tag(:div, msg, class: "alert alert-info") %>
+              <% end %>
          <div class="navbar-header">
            <a href="/" class="navbar-brand">Flicks</a>
            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
