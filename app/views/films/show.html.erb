@@ -44,6 +44,10 @@
     <strong>Comment:</strong>
     <%= comment.body %>
   </p>
+  <p>
+  <%= link_to 'Destroy Comment', [comment.film, comment],
+               method: :delete %>
+</p>
 <% end %>
    <h2>Add a comment:</h2>
 <%= form_for([@film, @film.comments.build]) do |f| %>
