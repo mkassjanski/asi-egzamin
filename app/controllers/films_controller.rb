@@ -1,5 +1,7 @@
 class FilmsController < ApplicationController
 
+before_action :authenticate_user!, except: [:index, :show]
+
   def index
    @films = Film.all.order('created_at DESC').page(params[:page]).per_page(6)
  end
@@ -9,34 +11,21 @@ class FilmsController < ApplicationController
  end
 
   def new
-    if user_signed_in?
      @film = current_user.films.build
-   else
-    redirect_to new_user_session_path, :notice => "Please log-in"
-    end
   end
 
   def edit
-     if user_signed_in?
     @film = Film.find(params[:id])
-  else
-  redirect_to new_user_session_path, :notice => "Please log-in"
-end
   end
 
   def destroy
-     if user_signed_in?
     @film = Film.find(params[:id])
     @film.destroy
-
     redirect_to films_path
-    else
-    redirect_to new_user_session_path, :notice => "Please log-in"
-    end
   end
 
   def create
-  @film = Film.new(film_params)
+    @film = current_user.films.build(film_params)
 
     if @film.save
     redirect_to @film
