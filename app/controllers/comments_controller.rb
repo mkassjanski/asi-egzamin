@@ -1,8 +1,14 @@
 class CommentsController < ApplicationController
   def create
-  @film = Film.find(params[:film_id])
-  @comment = @film.comments.create(comment_params)
-  redirect_to film_path(@film)
+    @film = Film.find(params[:film_id])
+    @comment = @film.comments.create(comment_params)
+    @comment.user_id=current_user.id if current_user
+    @comment.save
+    if @comment.save
+      redirect_to film_path(@film)
+  else
+    render 'new'
+  end
 end
 
 def destroy
