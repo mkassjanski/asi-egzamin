@@ -20,7 +20,7 @@
                 <td><%= @film.director %></td>
               </tr>
               <tr>
-                <td><strong>Movie year:</strong></td>
+                <td><strong>Date of premiere  :</strong></td>
                 <td><%= @film.year %></td>
               </tr>
             </tbody>
@@ -31,8 +31,9 @@
         <h1 class="review_title"><%= @film.title %></h1>
         <% @film.comments.each do |comment| %>
          <div class="star-rating" data-score= <%= comment.rating %> ></div>
-    <p><%= comment.user.email %> says: <%= comment.body %>   <%= link_to 'Delete', [comment.film, comment],
-               method: :delete %></p>
+    <p><%= comment.user.email %><br/> <%= comment.body %>   <%= link_to 'Delete', [comment.film, comment],
+               method: :delete %>
+               <hr/>
   <% end %>
 
         <%= form_for([@film, @film.comments.build]) do |f| %>
@@ -40,7 +41,7 @@
           <div id="star-rating2"></div>
       </div>
           <p>
-            <%= f.label :body %><br>
+            <%= f.label :"Add new comment:" %><br>
             <%= f.text_area( :body, class: "form-control",  ) %>
           </p>
           <p>
