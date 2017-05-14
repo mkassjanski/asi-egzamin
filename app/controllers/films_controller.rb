@@ -2,6 +2,14 @@ class FilmsController < ApplicationController
 
 before_action :authenticate_user!, except: [:index, :show]
 
+def search
+  if params[:search].present?
+    @films = Film.search(params[:search])
+  else
+    @films = Film.all
+  end
+end
+
   def index
    @films = Film.all.order('created_at DESC').page(params[:page]).per_page(6)
  end

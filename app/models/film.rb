@@ -1,4 +1,5 @@
 class Film < ApplicationRecord
+  searchkick
   belongs_to :user
 	has_many :comments, dependent: :destroy
   has_attached_file :poster, default_url: "https://www.thestage.com/images/NoImageAvailable.png"
