@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 #gem 'jquery-raty-rails'
+##Facebook
+gem 'social-share-button'
 ## Logowanie
 gem 'devise'
 ## Foto

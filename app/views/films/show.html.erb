@@ -4,8 +4,10 @@
     <div class="row">
       <div class="col-md-4">
         <%= image_tag @film.poster.url  %>
+      </br>
+      <p>  <%= social_share_button_tag(@film.title) %></p>
         <div class="star-rating" data-score= <%= @avg_review %> ></div>
-          <em><%= "#{@film.comments.length} rating" %></em>
+          <em><%= "#{@film.comments.length} ratings" %></em>
         <div class="table-responsive">
           <table class="table">
             <tbody>
