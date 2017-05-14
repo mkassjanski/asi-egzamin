@@ -4,6 +4,8 @@
     <div class="row">
       <div class="col-md-4">
         <%= image_tag @film.poster.url  %>
+        <div class="star-rating" data-score= <%= @avg_review %> ></div>
+          <em><%= "#{@film.comments.length} rating" %></em>
         <div class="table-responsive">
           <table class="table">
             <tbody>

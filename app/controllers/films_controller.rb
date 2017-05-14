@@ -8,6 +8,13 @@ before_action :authenticate_user!, except: [:index, :show]
 
   def show
    @film = Film.find(params[:id])
+
+   if @film.comments.blank?
+    @avg_review = 0
+  else
+    @avg_review = @film.comments.average(:rating).round(2)
+  end
+
  end
 
   def new
