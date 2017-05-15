@@ -1,6 +1,6 @@
 
 <div class="container">
-  <h1>Editing film</h1>
+  <h1 class="text-center none-margin-top-bottom">Editing film</h1>
 
 <%= form_for :film, url: film_path(@film), method: :patch do |f| %>
 
@@ -38,11 +38,9 @@
     <%= f.text_field :year %>
   </p>
 
-  <p>
-    <%= f.submit %>
-  </p>
+    <button type="submit" class="btn btn-success btn-circle btn-outline glyphicon glyphicon-ok"></button>
 
+
+<%= link_to "", films_path, class: "btn btn-default btn-circle btn-outline glyphicon glyphicon-arrow-left" %>
 <% end %>
-
-<%= link_to 'Back', films_path %>
 </div>

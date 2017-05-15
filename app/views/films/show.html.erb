@@ -35,7 +35,7 @@
     <% if user_signed_in? %>
     <p><%= link_to "", [comment.film, comment] , method: :delete, class: "glyphicon glyphicon-remove" %></p>
     <% end %>
-               <hr/>
+             <hr/>
   <% end %>
 <% if user_signed_in? %>
         <%= form_for([@film, @film.comments.build]) do |f| %>
