@@ -3,7 +3,7 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-4">
-        <%= image_tag @film.poster.url  %>
+        <%= image_tag @film.poster.url, class: "poster256"  %>
       </br>
       <p>  <%= social_share_button_tag(@film.title) %></p>
         <div class="star-rating" data-score= <%= @avg_review %> ></div>
