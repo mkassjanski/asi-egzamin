@@ -32063,3 +32063,192 @@ Processing by FilmsController#index as HTML
 Completed 200 OK in 102ms (Views: 99.9ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/films/new" for 127.0.0.1 at 2017-05-15 21:02:50 +0200
+Processing by FilmsController#new as HTML
+Completed 401 Unauthorized in 101ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-15 21:02:50 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 118ms (Views: 113.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-15 21:03:02 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KeAZNMHcCnahH2wblLlNpcGMNwGGbj+xaGeEXZPXpwju+QD66UMoruZrDRqkz3xr9PXxjYHQNPqxWTnolkwsKg==", "user"=>{"email"=>"test@o2.pl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@o2.pl"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KeAZNMHcCnahH2wblLlNpcGMNwGGbj+xaGeEXZPXpwju+QD66UMoruZrDRqkz3xr9PXxjYHQNPqxWTnolkwsKg==", "user"=>{"email"=>"test@o2.pl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 418ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-15 21:03:07 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1PpWcdm3loQDban+TtjRk89QNXtqyu2lD7fhTA4b4OJRTMhxceBvuah3dF6mSZy5zhI0eTycySZ9y5T8sbc8sQ==", "user"=>{"email"=>"test@o2.pl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@o2.pl"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1PpWcdm3loQDban+TtjRk89QNXtqyu2lD7fhTA4b4OJRTMhxceBvuah3dF6mSZy5zhI0eTycySZ9y5T8sbc8sQ==", "user"=>{"email"=>"test@o2.pl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 325ms (Views: 94.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-15 21:03:14 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 138ms (Views: 136.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-15 21:03:16 +0200
+Processing by WelcomeController#index as HTML
+Started GET "/" for 127.0.0.1 at 2017-05-15 21:03:16 +0200
+  Rendering welcome/index.html.erb within layouts/application
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 252ms (Views: 224.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 215ms (Views: 209.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/films" for 127.0.0.1 at 2017-05-15 21:03:19 +0200
+Processing by FilmsController#index as HTML
+  Rendering films/index.html.erb within layouts/application
+  [1m[36mFilm Load (0.4ms)[0m  [1m[34mSELECT  "films".* FROM "films" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "films"[0m
+  Rendered films/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 99ms (Views: 96.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/films/new" for 127.0.0.1 at 2017-05-15 21:03:29 +0200
+Processing by FilmsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-15 21:03:29 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 99ms (Views: 98.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-15 21:03:37 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4I4WHWpd1vYUXb8JjVcVyatGQ9SKX5FvxAc1+Pgn5eknlw/TQsL0LlMp3gi9ISQHnj+FWI3hmiQdOYhN/bxuyw==", "user"=>{"email"=>"test1@o2.pl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test1@o2.pl"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-05-15 19:03:37 UTC], ["last_sign_in_at", 2017-05-15 19:03:37 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", 2017-05-15 19:03:37 UTC], ["id", 1]]
+  [1m[35m (65.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/films/new
+Completed 302 Found in 321ms (ActiveRecord: 66.7ms)
+
+
+Started GET "/films/new" for 127.0.0.1 at 2017-05-15 21:03:37 +0200
+Processing by FilmsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering films/new.html.erb within layouts/application
+  Rendered films/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 121ms (Views: 112.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/films" for 127.0.0.1 at 2017-05-15 21:04:03 +0200
+Processing by FilmsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uiPxYmjgw9N9YoK7NZnkJknb9sLHgmcG4NMS/+bdHeU3yDr7X6Z93Hlwe2X7Rw7gtGbWPCCrZKpA3ELKKLa3gg==", "film"=>{"poster"=>#<ActionDispatch::Http::UploadedFile:0x00000002f39678 @tempfile=#<Tempfile:/tmp/RackMultipart20170515-10272-w00wnm.jpg>, @original_filename="graduate-member.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"film[poster]\"; filename=\"graduate-member.jpg\"\r\nContent-Type: image/jpeg\r\n">, "title"=>"dsdfsdfsdf", "director"=>"asasdadsads", "year"=>"sfdsfsdsdf"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Command :: file -b --mime '/tmp/e84d678d5535f6526a64e72b67954db320170515-10272-47k1zc.jpg'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/e84d678d5535f6526a64e72b67954db320170515-10272-1rasfw5.jpg'
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "films" ("title", "director", "year", "created_at", "updated_at", "poster_file_name", "poster_content_type", "poster_file_size", "poster_updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "dsdfsdfsdf"], ["director", "asasdadsads"], ["year", "sfdsfsdsdf"], ["created_at", 2017-05-15 19:04:03 UTC], ["updated_at", 2017-05-15 19:04:03 UTC], ["poster_file_name", "graduate-member.jpg"], ["poster_content_type", "image/jpeg"], ["poster_file_size", 41121], ["poster_updated_at", 2017-05-15 19:04:03 UTC], ["user_id", 1]]
+  [1m[35m (206.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[33mFilm Store (119.9ms)[0m  {"id":20}
+Redirected to http://localhost:3000/films/20
+Completed 302 Found in 364ms (Searchkick: 119.9ms | ActiveRecord: 207.6ms)
+
+
+Started GET "/films/20" for 127.0.0.1 at 2017-05-15 21:04:03 +0200
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mFilm Load (0.2ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."film_id" = ?[0m  [["film_id", 20]]
+  Rendering films/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered films/show.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 126ms (Views: 122.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/films" for 127.0.0.1 at 2017-05-15 21:04:09 +0200
+Processing by FilmsController#index as HTML
+  Rendering films/index.html.erb within layouts/application
+  [1m[36mFilm Load (0.5ms)[0m  [1m[34mSELECT  "films".* FROM "films" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "films"[0m
+  Rendered films/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 102ms (Views: 99.3ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/films/20" for 127.0.0.1 at 2017-05-15 21:04:28 +0200
+Processing by FilmsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LgsYoALNgflFtdIOHWGnPY86oJpis0ndaltKjfLdqTmj4NM5NYs/9kGnK9DTv037coeAZIWaSnHKVBq4PLYDXg==", "id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFilm Load (0.4ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."film_id" = ?[0m  [["film_id", 20]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "films" WHERE "films"."id" = ?[0m  [["id", 20]]
+  [1m[35m (188.4ms)[0m  [1m[36mcommit transaction[0m
+[paperclip] deleting /home/michal/public_html/asi-egzamin/public/system/films/posters/000/000/020/original/graduate-member.jpg
+  [1m[33mFilm Remove (67.4ms)[0m  {"id":20}
+Redirected to http://localhost:3000/films
+Completed 302 Found in 271ms (Searchkick: 67.4ms | ActiveRecord: 189.9ms)
+
+
+Started GET "/films" for 127.0.0.1 at 2017-05-15 21:04:29 +0200
+Processing by FilmsController#index as HTML
+  Rendering films/index.html.erb within layouts/application
+  [1m[36mFilm Load (0.4ms)[0m  [1m[34mSELECT  "films".* FROM "films" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "films"[0m
+  Rendered films/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 98ms (Views: 95.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/films" for 127.0.0.1 at 2017-05-15 21:06:04 +0200
+Processing by FilmsController#index as HTML
+  Rendering films/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFilm Load (0.6ms)[0m  [1m[34mSELECT  "films".* FROM "films" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "films"[0m
+  Rendered films/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 99ms (Views: 96.6ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-05-15 21:06:07 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NF0HpENYXUr4Nga055Jg8B18KPTYZhegKegFkJ3BN0S5tsw9dB7jRfwk/2opTIo24MEICj9PFAyJ51WlU6qdIw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 91ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-15 21:06:08 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 92ms (Views: 91.2ms | ActiveRecord: 0.0ms)
+
+

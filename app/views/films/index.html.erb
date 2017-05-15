@@ -1,7 +1,9 @@
 <h1 class="text-center none-margin-top-bottom">Films</h1>
 
 <div class="container">
-<%= link_to "", new_film_url, class: "btn btn-default btn-circle btn-outline glyphicon glyphicon-plus" %></br></br>
+  <% if user_signed_in? %>
+  <%= link_to "", new_film_url, class: "btn btn-default btn-circle btn-outline glyphicon glyphicon-plus" %></br></br>
+  <% end %>
   <div class="row">
   <% @films.each do |f| %>
   <div class="col-sm-6 col-md-4">
@@ -25,6 +27,4 @@
 </div>
 <%= will_paginate @films, renderer: BootstrapPagination::Rails %>
 </br>
-<% if user_signed_in? %>
-<% end %>
 </div>
