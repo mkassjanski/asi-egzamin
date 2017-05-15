@@ -11,12 +11,11 @@
         <h3 class="text-center"><%= f.title %></h3>
         <p class="text-center"><%= f.director %> <%= f.year %></p>
           <p class="text-center">
-            <%= link_to "", f, class: "btn btn-xs btn-info btn-circle btn-outline glyphicon glyphicon-eye-open" %>
-              <%= link_to "", edit_film_path(f), class: "btn btn-xs btn-primary btn-circle btn-outline glyphicon glyphicon-pencil" %>
-              <%= link_to '', film_path(f),
-              method: :delete,
-              data: { confirm: 'Are you sure?' },
-              class: "btn btn-xs btn-danger btn-circle btn-outline glyphicon glyphicon-remove" %>
+            <%= link_to "", f, class: "btn btn-default btn-circle btn-outline glyphicon glyphicon-search" %>
+                      <% if user_signed_in? %>
+                      <%= link_to "", edit_film_path(f), class: "btn btn-default btn-circle btn-outline glyphicon glyphicon-pencil" %>
+                      <%= link_to "", film_path(f) , method: :delete, class: "btn btn-default btn-circle btn-outline glyphicon glyphicon-remove" %>
+                      <% end %>
             </p>
             </div>
     </div>
@@ -25,6 +24,7 @@
 </div>
 <%= will_paginate @films, renderer: BootstrapPagination::Rails %>
 </br>
-<%= link_to "Add new film", new_film_url ,class: "glyphicon glyphicon-plus" %>
-
+<% if user_signed_in? %>
+<%= link_to "", new_film_url, class: "btn btn-default btn-circle btn-outline glyphicon glyphicon-plus" %></br>
+<% end %>
 </div>

@@ -31,11 +31,13 @@
         <h1 class="review_title"><%= @film.title %></h1>
         <% @film.comments.each do |comment| %>
          <div class="star-rating" data-score= <%= comment.rating %> ></div>
-    <p><%= comment.user.email %><br/> <%= comment.body %>   <%= link_to 'Delete', [comment.film, comment],
-               method: :delete %>
+    <p><%= comment.user.email %><br/> <%= comment.body %>
+    <% if user_signed_in? %>
+    <p><%= link_to "", [comment.film, comment] , method: :delete, class: "glyphicon glyphicon-remove" %></p>
+    <% end %>
                <hr/>
   <% end %>
-
+<% if user_signed_in? %>
         <%= form_for([@film, @film.comments.build]) do |f| %>
         <div class="field">
           <div id="star-rating2"></div>
@@ -49,14 +51,18 @@
             <%= f.submit :class => "btn btn-default" %>
           </p>
         <% end %>
-
+<% end %>
       </div>
     </div>
   </div>
 </div>
+<div class="form-group">
+    <%= link_to "", films_path, class: "btn btn-default btn-circle btn-outline glyphicon glyphicon-arrow-left" %>
+    <% if user_signed_in? %>
+    <%= link_to "",  edit_film_path(@film), class: "btn btn-default btn-circle btn-outline glyphicon glyphicon-pencil" %>
+    <%end %>
+</div>
 
-<%= link_to 'Edit', edit_film_path(@film) %> |
-<%= link_to 'Back', films_path %>
 </div>
 <script>
     $('.star-rating').raty({
