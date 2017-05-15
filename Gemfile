@@ -53,6 +53,8 @@ gem 'aws-sdk', '~> 2.3'
 # dane
 gem 'faker', '~> 1.7.3'
 
+gem 'rails-erd'
+
 group :development do
   gem 'sqlite3'
 end
