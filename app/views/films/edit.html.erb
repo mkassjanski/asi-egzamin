@@ -1,6 +1,6 @@
 
-<div class="container">
-  <h1 class="text-center none-margin-top-bottom">Editing film</h1>
+<div class="container form-horizontal">
+  <h1>Editing film</h1>
 
 <%= form_for :film, url: film_path(@film), method: :patch do |f| %>
 
@@ -18,29 +18,42 @@
     </div>
   <% end %>
 
-  <p>
-    <%= f.label :poster %><br>
-		<%= f.file_field :poster %>
-  </p>
+  <div class="form-group">
+    <%= f.label :poster, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+    <%= f.file_field :poster %>
+  </br>
+  </div>
+  </div>
+    <div class="form-group">
+      <%= f.label :title, class: "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= f.text_field :title, class: "form-horizontal opacity" %>
+        </br>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :director, class: "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= f.text_field :director, class: "form-horizontal opacity" %>
+        </br>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :year, class: "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= f.text_field :year, class: "form-horizontal opacity" %>
+        </br>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="text-center">
+        <button type="submit" class="btn btn-success btn-circle btn-outline glyphicon glyphicon-ok"></button>
+        <%= link_to "", films_path, class: "btn btn-default btn-circle btn-outline glyphicon glyphicon-arrow-left" %>
+      </div>
+    </div>
 
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-
-  <p>
-    <%= f.label :director %><br>
-    <%= f.text_field :director %>
-  </p>
-
-  <p>
-    <%= f.label :year %><br>
-    <%= f.text_field :year %>
-  </p>
-
-    <button type="submit" class="btn btn-success btn-circle btn-outline glyphicon glyphicon-ok"></button>
-
-
-<%= link_to "", films_path, class: "btn btn-default btn-circle btn-outline glyphicon glyphicon-arrow-left" %>
 <% end %>
+
+<%= link_to 'Back', films_path %>
 </div>
