@@ -38,5 +38,5 @@ Dodatkowe gemy i pluginy:
   * aws-sdk - [konfiguracja](https://github.com/mkassjanski/asi-gzamin/blob/master/config/environments/production.rb)
 * jQuery Raty - A Star Rating Plugin - dodawanie ocen filmów
     (https://github.com/wbotelhos/raty)
-* searchkick - elastic search
+* searchkick - elastic search (2.4.0)
 * social-share-button - możliwość udostępnienia filmu przez portale społecznościowe
