@@ -35,8 +35,8 @@ Aplikacja przechowuje podstawowe informacje o filmach. Gość może jedynie prze
 
 Dodatkowe gemy i pluginy:
 * paperclip - możliwość dodawania zdjęć
-  * aws-sdk - [konfiguracja](https://github.com/mkassjanski/asi-gzamin/blob/master/config/environments/production.rb)
+  * aws-sdk - [konfiguracja](https://github.com/mkassjanski/asi-egzamin/blob/master/config/environments/production.rb#L91)
 * jQuery Raty - A Star Rating Plugin - dodawanie ocen filmów
     (https://github.com/wbotelhos/raty)
-* searchkick - elastic search (2.4.0)
+* searchkick - Elasticsearch v. 2.4.0
 * social-share-button - możliwość udostępnienia filmu przez portale społecznościowe
